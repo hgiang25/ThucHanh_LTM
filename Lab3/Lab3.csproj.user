@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Bai01\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai01\UDPClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai01\UDPServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai02\TCPServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai03\Lab03_Bai03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai03\TCPClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
