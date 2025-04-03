@@ -20,3 +20,4 @@ D:\Microsoft Visual Studio\LTM\Lab3\Lab3\obj\Debug\net8.0-windows\ref\Lab3.dll
 D:\Microsoft Visual Studio\LTM\Lab3\Lab3\obj\Debug\net8.0-windows\Lab3.Bai02.TCPServer.resources
 D:\Microsoft Visual Studio\LTM\Lab3\Lab3\obj\Debug\net8.0-windows\Lab3.Bai03.Lab03_Bai03.resources
 D:\Microsoft Visual Studio\LTM\Lab3\Lab3\obj\Debug\net8.0-windows\Lab3.Bai03.TCPClient.resources
+D:\Microsoft Visual Studio\LTM\Lab3\Lab3\obj\Debug\net8.0-windows\Lab3.sourcelink.json

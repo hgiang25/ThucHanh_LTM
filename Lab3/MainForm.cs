@@ -23,19 +23,19 @@ namespace Lab3
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
-            form.ShowDialog();
+            form.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             TCPServer form = new TCPServer();
-            form.ShowDialog();
+            form.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Lab03_Bai03 lab03_Bai03 = new Lab03_Bai03();    
-            lab03_Bai03.ShowDialog();
+            lab03_Bai03.Show();
         }
     }
 }
