@@ -17,10 +17,18 @@ namespace Lab3.Bai04
             InitializeComponent();
         }
 
+        private ChatServer chatServer = null; // Biến để lưu instance của ChatServer
         private void button1_Click(object sender, EventArgs e)
         {
-            ChatServer form = new ChatServer();
-            form.Show();
+            if (chatServer == null || chatServer.IsDisposed) // Kiểm tra nếu instance không tồn tại hoặc đã bị đóng
+            {
+                chatServer = new ChatServer();
+                chatServer.Show();
+            }
+            else
+            {
+                MessageBox.Show("Chat server is already running.");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
