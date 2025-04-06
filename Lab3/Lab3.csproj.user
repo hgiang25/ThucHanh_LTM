@@ -19,6 +19,15 @@
     <Compile Update="Bai03\TCPClient.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Bai04\ChatClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai04\ChatRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Bai04\ChatServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

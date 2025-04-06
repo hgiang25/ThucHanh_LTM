@@ -1,6 +1,6 @@
-﻿namespace Lab3
+﻿namespace Lab3.Bai04
 {
-    partial class MainForm
+    partial class ChatRoom
     {
         /// <summary>
         /// Required designer variable.
@@ -30,69 +30,46 @@
         {
             button1 = new Button();
             button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(228, 144);
+            button1.AutoSize = true;
+            button1.Location = new Point(340, 112);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(158, 90);
             button1.TabIndex = 0;
-            button1.Text = "Bài 01";
+            button1.Text = "Create Server";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(482, 144);
+            button2.AutoSize = true;
+            button2.Location = new Point(340, 231);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(158, 90);
             button2.TabIndex = 1;
-            button2.Text = "Bài 02";
+            button2.Text = "New Client";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button3
-            // 
-            button3.Location = new Point(228, 290);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 2;
-            button3.Text = "Bài 03";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(482, 290);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 29);
-            button4.TabIndex = 3;
-            button4.Text = "Bài 04";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // MainForm
+            // ChatRoom
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button4);
-            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Name = "MainForm";
-            Text = "MainForm";
+            Name = "ChatRoom";
+            Text = "ChatRoom";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button button1;
         private Button button2;
-        private Button button3;
-        private Button button4;
     }
 }

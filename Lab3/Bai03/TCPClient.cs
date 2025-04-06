@@ -14,12 +14,14 @@ namespace Lab3.Bai03
 {
     public partial class TCPClient : Form
     {
-        private TcpClient tcpClient = null;
-        private NetworkStream ns;
         public TCPClient()
         {
             InitializeComponent();
         }
+
+        private TcpClient tcpClient = null;
+        private NetworkStream ns;
+        
 
         private void btnSend_Click(object sender, EventArgs e)
         {

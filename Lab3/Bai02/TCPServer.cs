@@ -210,14 +210,15 @@ using System.Net;
 namespace Lab3.Bai02
 {
     public partial class TCPServer : Form
-    {
-        private bool isServerRunning = false;        
+    {        
         public TCPServer()
         {
             InitializeComponent();
         }
-
+        private bool isServerRunning = false;
         private Socket serverSocket = null;
+        private Thread serverThread;
+
 
         private void btnListen_Click(object sender, EventArgs e)
         {
@@ -225,7 +226,7 @@ namespace Lab3.Bai02
             CheckForIllegalCrossThreadCalls = false;
 
             // Tạo và bắt đầu thread server chỉ khi server chưa chạy
-            Thread serverThread = new Thread(new ThreadStart(StartUnsafeThread));
+            serverThread = new Thread(new ThreadStart(StartUnsafeThread));            
             serverThread.Start();
             isServerRunning = true;
         }
@@ -262,89 +263,146 @@ namespace Lab3.Bai02
                 // Hiển thị thông báo khi server bắt đầu lắng nghe
                 Invoke(new Action(() => MessageBox.Show("Server đang lắng nghe trên cổng " + port)));
                 while (isServerRunning)
-                {            
-                    clientSocket = serverSocket.Accept();
-                    lvMessage.Items.Add(new ListViewItem("Telnet running on 127.0.0.1:8080"));
-                    lvMessage.Items.Add(new ListViewItem("New client connected"));
-                    while (clientSocket.Connected)
-                    {            
-                        StringBuilder text = new StringBuilder();
-                        bytesReceived = 0;
+                {
+                    try
+                    {
+                        clientSocket = serverSocket.Accept();
+                        clientSocket.ReceiveTimeout = 1000; // 1000 ms = 1 giây
 
-                        // Nhận dữ liệu từ client
-                        while ((bytesReceived = clientSocket.Receive(recv, 0, recv.Length, SocketFlags.None)) > 0)
+                        // Kiểm tra lại flag để ngăn xử lý khi server đã đóng
+                        if (!isServerRunning)
                         {
-                            text.Append(Encoding.ASCII.GetString(recv, 0, bytesReceived));
+                            clientSocket.Close();
+                            return;
+                        }
+                    }
+                    catch (SocketException e)
+                    {
+                        break;
+                    }
+                    lvMessage.Items.Add(new ListViewItem("Telnet running on 127.0.0.1:8080"));
+                    lvMessage.Invoke(new Action(() =>
+                    {
+                        lvMessage.Items.Add(new ListViewItem("New client connected"));
+                    }));
+                    try
+                    {
 
-                            if (text.ToString().Contains("\n"))
+                        while (true)
+                        {
+                            if (!isServerRunning)
                             {
                                 break;
                             }
-                        }
 
-                        // Hiển thị thông điệp nhận được
-                        if (text.Length > 0)
-                        {
-                            Invoke(new Action(() =>
+                            string text = "";
+                            try
                             {
-                                lvMessage.Items.Add(new ListViewItem(text.ToString()));
-                                lvMessage.EnsureVisible(lvMessage.Items.Count - 1);
-                            }));
-                        }
-                        else
-                        {
-                            Invoke(new Action(() =>
+                                do
+                                {
+                                    try
+                                    {
+                                        bytesReceived = clientSocket.Receive(recv);
+                                    }
+                                    catch (SocketException ex)
+                                    {
+                                        if (ex.SocketErrorCode == SocketError.TimedOut)
+                                        {
+                                            // Client không gửi gì trong thời gian timeout
+                                            // Kiểm tra xem server có đang chạy không, nếu không thì thoát
+                                            if (!isServerRunning)
+                                                break;
+                                            else
+                                                continue;
+                                        }
+                                        else
+                                        {
+                                            // Các lỗi khác ⇒ đóng kết nối
+                                            throw;
+                                        }
+                                    }
+
+                                    if (bytesReceived == 0)
+                                    {
+                                        break;
+                                    }
+
+                                    text += Encoding.ASCII.GetString(recv, 0, bytesReceived);
+
+                                } while (text.Length == 0 || text[text.Length - 1] != '\n');
+                            }
+                            catch (Exception ex)
                             {
-                                lvMessage.Items.Add(new ListViewItem("Client disconnected from " + clientSocket.RemoteEndPoint.ToString()));
-                                lvMessage.EnsureVisible(lvMessage.Items.Count - 1);
-                            }));
-                            break;
+                                Invoke(new Action(() => MessageBox.Show("Lỗi nhận dữ liệu: " + ex.Message)));
+                                break;
+                            }
+
+                            if (text.Length > 0)
+                            {
+                                lvMessage.Invoke(new Action(() =>
+                                {
+                                    lvMessage.Items.Add(new ListViewItem(text));
+                                }));
+                            }
+                            else
+                            {
+                                lvMessage.Invoke(new Action(() =>
+                                {
+                                    lvMessage.Items.Add(new ListViewItem("Client disconnected"));
+                                }));
+                                break;
+                            }
                         }
+                        try
+                        {
+                            clientSocket.Shutdown(SocketShutdown.Both);
+                        }
+                        catch { }
+                        clientSocket.Close();
+
                     }
-                    clientSocket.Shutdown(SocketShutdown.Both);
-                    clientSocket.Close();
+                    catch (ObjectDisposedException)
+                    {
+                        // Socket đã bị đóng khi form bị dispose
+                    }
+                    catch (Exception ex)
+                    {
+                        Invoke(new Action(() => MessageBox.Show("Lỗi socket: " + ex.Message)));
+                    }
                 }
-
-                // Chấp nhận kết nối từ client
             }
             catch (Exception ex)
             {
-                Invoke(new Action(() => MessageBox.Show("Lỗi: " + ex.Message)));
+                Invoke(new Action(() => MessageBox.Show("Lỗi socket: " + ex.Message)));
             }
         }
 
         private void TCPServer_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (serverSocket != null)
+            isServerRunning = false;
+            try
             {
-                serverSocket.Close();  // Đóng socket
-                serverSocket = null;   // Giải phóng tài nguyên                    
+                serverSocket?.Close(); // Gây lỗi Accept() để thoát khỏi vòng lặp
+                //serverThread?.Join();  // Chờ thread kết thúc
             }
+            catch { }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            isServerRunning = false;             
-            if (serverSocket != null && serverSocket.Connected)
-            {
-                try
-                {
-                    // Đảm bảo đóng kết nối đúng cách
-                    serverSocket.Shutdown(SocketShutdown.Both); // Đóng cả hai chiều gửi và nhận
-                }
-                catch (Exception ex)
-                {
-                    // Xử lý ngoại lệ nếu có khi gọi Shutdown
-                    Console.WriteLine("Error during socket shutdown: " + ex.Message);
-                }
-            }
+            isServerRunning = false;
 
-            // Đảm bảo đóng socket đúng cách
-            if (serverSocket != null)
+            try
             {
-                serverSocket.Close();  // Đóng socket
-                serverSocket = null;   // Giải phóng tài nguyên                    
+                serverSocket?.Close(); // Gây lỗi Accept() để dừng serverThread
+                //serverThread?.Join();  // Đợi thread thoát
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi đóng server: " + ex.Message);
+            }
+            MessageBox.Show("Server disconnected");
+            serverSocket = null;
         }
     }
 }

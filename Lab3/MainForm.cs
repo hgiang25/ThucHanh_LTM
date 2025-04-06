@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Lab3.Bai01;
 using Lab3.Bai02;
 using Lab3.Bai03;
+using Lab3.Bai04;
 
 namespace Lab3
 {
@@ -34,8 +35,14 @@ namespace Lab3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Lab03_Bai03 lab03_Bai03 = new Lab03_Bai03();    
+            Lab03_Bai03 lab03_Bai03 = new Lab03_Bai03();
             lab03_Bai03.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ChatRoom chatRoom = new ChatRoom();
+            chatRoom.Show();
         }
     }
 }
