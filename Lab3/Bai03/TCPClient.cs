@@ -56,19 +56,51 @@ namespace Lab3.Bai03
 
                     tcpClient.Connect(ipEndPoint);
                     ns = tcpClient.GetStream();
-                    MessageBox.Show("Kết nối thành công!");
+
+                    // Gửi thông điệp kiểm tra
+                    byte[] checkMsg = Encoding.UTF8.GetBytes("HELLO\n");
+                    ns.Write(checkMsg, 0, checkMsg.Length);
+
+                    // Đọc phản hồi từ server
+                    byte[] buffer = new byte[1024];
+                    ns.ReadTimeout = 2000; // 2 giây timeout
+                    int bytesRead = ns.Read(buffer, 0, buffer.Length);
+                    string response = Encoding.UTF8.GetString(buffer, 0, bytesRead).Trim();
+
+                    if (response == "OK") // Giả sử server phản hồi "OK" nếu chấp nhận
+                    {
+                        MessageBox.Show("✅ Kết nối thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        throw new Exception("Server từ chối kết nối.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Đã kết nối với server!");
-                    return;
+                    MessageBox.Show("⚠️ Đã kết nối với server!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi kết nối: " + ex.Message,"Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("🚫 Lỗi khi kiểm tra kết nối: " + ex.Message,
+                                "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Đóng lại kết nối nếu có lỗi
+                if (tcpClient != null)
+                {
+                    try
+                    {
+                        tcpClient.Close();
+                        tcpClient = null;
+                        ns = null;
+                    }
+                    catch { }
+                }
             }
         }
+
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {

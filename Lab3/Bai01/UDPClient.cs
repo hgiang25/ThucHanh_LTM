@@ -39,8 +39,8 @@ namespace Lab3.Bai01
                 using (UdpClient udpClient = new UdpClient())
                 {
                     //udpClient.Connect(txtHost.Text,port);
-                    Byte[] sendBytes = Encoding.ASCII.GetBytes("Hello UITer!");
-                    Byte[] message = Encoding.ASCII.GetBytes(rtbMess.Text);
+                    Byte[] sendBytes = Encoding.UTF8.GetBytes("Hello UITer!");
+                    Byte[] message = Encoding.UTF8.GetBytes(rtbMess.Text);
 
                     udpClient.Send(sendBytes, sendBytes.Length, host, port);
                     udpClient.Send(message, message.Length, host, port);
@@ -60,6 +60,7 @@ namespace Lab3.Bai01
             {
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            rtbMess.Clear();
         }
 
     }

@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai02\\tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai02\\tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|D:\\Microsoft Visual Studio\\LTM\\Lab3\\lab3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai04\\chatroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,10 +46,6 @@
       "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|D:\\Microsoft Visual Studio\\LTM\\Lab3\\lab3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|D:\\Microsoft Visual Studio\\LTM\\Lab3\\lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -53,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -68,8 +72,25 @@
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "TCPServer.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai02\\TCPServer.cs",
+              "RelativeDocumentMoniker": "Lab3\\Bai02\\TCPServer.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai02\\TCPServer.cs",
+              "RelativeToolTip": "Lab3\\Bai02\\TCPServer.cs",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAgwNgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T12:24:49.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Ch\u01B0\u01A1ng3\\Chuong3-Bosung\\Chuong3Bai9\\SendBroadcst\\Program.cs",
               "RelativeDocumentMoniker": "..\\Ch\u01B0\u01A1ng3\\Chuong3-Bosung\\Chuong3Bai9\\SendBroadcst\\Program.cs",
@@ -77,17 +98,16 @@
               "RelativeToolTip": "..\\Ch\u01B0\u01A1ng3\\Chuong3-Bosung\\Chuong3Bai9\\SendBroadcst\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T01:18:31.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T01:18:31.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ChatRoom.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatRoom.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatRoom.cs",
-              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatRoom.cs*",
-              "RelativeToolTip": "Lab3\\Bai04\\ChatRoom.cs*",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatRoom.cs",
+              "RelativeToolTip": "Lab3\\Bai04\\ChatRoom.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwBAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T14:49:01.035Z",
@@ -95,54 +115,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ChatRoom.cs [Design]",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatRoom.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatRoom.cs",
-              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatRoom.cs [Design]*",
-              "RelativeToolTip": "Lab3\\Bai04\\ChatRoom.cs [Design]*",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatRoom.cs [Design]",
+              "RelativeToolTip": "Lab3\\Bai04\\ChatRoom.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T14:47:32.51Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-03T14:47:32.51Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ChatClient.Designer.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.Designer.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatClient.Designer.cs",
-              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.Designer.cs*",
-              "RelativeToolTip": "Lab3\\Bai04\\ChatClient.Designer.cs*",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.Designer.cs",
+              "RelativeToolTip": "Lab3\\Bai04\\ChatClient.Designer.cs",
               "ViewState": "AgIAAGcAAAAAAAAAAAAQwFsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T14:40:09.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T14:40:09.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ChatClient.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatClient.cs",
-              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.cs*",
-              "RelativeToolTip": "Lab3\\Bai04\\ChatClient.cs*",
-              "ViewState": "AgIAAC0BAAAAAAAAAAAswDoBAAANAAAAAAAAAA==",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.cs",
+              "RelativeToolTip": "Lab3\\Bai04\\ChatClient.cs",
+              "ViewState": "AgIAABABAAAAAAAAAAAowCABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T14:38:22.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ChatServer.Designer.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.Designer.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatServer.Designer.cs",
-              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.Designer.cs*",
-              "RelativeToolTip": "Lab3\\Bai04\\ChatServer.Designer.cs*",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.Designer.cs",
+              "RelativeToolTip": "Lab3\\Bai04\\ChatServer.Designer.cs",
               "ViewState": "AgIAAIMAAAAAAAAAAADwv1UAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T14:35:02.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T14:35:02.836Z"
             },
             {
               "$type": "Document",
@@ -150,16 +167,16 @@
               "Title": "ChatServer.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatServer.cs",
-              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.cs*",
-              "RelativeToolTip": "Lab3\\Bai04\\ChatServer.cs*",
-              "ViewState": "AgIAAAwBAAAAAAAAAAAswBoBAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.cs",
+              "RelativeToolTip": "Lab3\\Bai04\\ChatServer.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAmwGwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T14:34:55.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ChatClient.cs [Design]",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatClient.cs",
@@ -170,19 +187,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ChatServer.cs [Design]",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatServer.cs",
-              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.cs [Design]*",
-              "RelativeToolTip": "Lab3\\Bai04\\ChatServer.cs [Design]*",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.cs [Design]",
+              "RelativeToolTip": "Lab3\\Bai04\\ChatServer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T14:34:35.986Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-03T14:34:35.986Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "MainForm.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\MainForm.cs",
               "RelativeDocumentMoniker": "Lab3\\MainForm.cs",
@@ -195,14 +211,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\MainForm.cs",
               "RelativeDocumentMoniker": "Lab3\\MainForm.cs",
               "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\MainForm.cs [Design]",
               "RelativeToolTip": "Lab3\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T01:19:14.994Z"
+              "WhenOpened": "2025-03-31T01:19:14.994Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

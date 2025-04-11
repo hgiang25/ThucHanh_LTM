@@ -33,6 +33,7 @@
             lvMessage = new ListView();
             contextMenuStrip1 = new ContextMenuStrip(components);
             btnClose = new Button();
+            btnClear = new Button();
             SuspendLayout();
             // 
             // btnListen
@@ -70,11 +71,22 @@
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
             // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(327, 51);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(94, 29);
+            btnClear.TabIndex = 3;
+            btnClear.Text = "Clear All";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
             // TCPServer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnClear);
             Controls.Add(btnClose);
             Controls.Add(lvMessage);
             Controls.Add(btnListen);
@@ -90,5 +102,6 @@
         private ListView lvMessage;
         private ContextMenuStrip contextMenuStrip1;
         private Button btnClose;
+        private Button btnClear;
     }
 }

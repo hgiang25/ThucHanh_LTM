@@ -269,7 +269,7 @@ namespace Lab3.Bai04
                 {
                     // Đóng gói tin nhắn theo định dạng "username:message"
                     string message = $"{txtUsername.Text}: {txtMessage.Text}\n";
-                    byte[] data = Encoding.ASCII.GetBytes(message);
+                    byte[] data = Encoding.UTF8.GetBytes(message);
 
                     // Gửi tin nhắn đến server
                     ns.Write(data, 0, data.Length);
@@ -279,6 +279,7 @@ namespace Lab3.Bai04
                 {
                     MessageBox.Show("Lỗi gửi dữ liệu: " + ex.Message);
                 }
+                txtMessage.Clear();
             }
             else
             {
@@ -334,7 +335,7 @@ namespace Lab3.Bai04
                     if (bytesReceived > 0)
                     {
                         // Kiểm tra tin nhắn đã nhận được
-                        string receivedMessage = Encoding.ASCII.GetString(buffer, 0, bytesReceived);
+                        string receivedMessage = Encoding.UTF8.GetString(buffer, 0, bytesReceived);
                         // MessageBox.Show($"Received Message: {receivedMessage}"); // Kiểm tra xem client có nhận tin nhắn không
 
                         messageBuilder.Append(receivedMessage);
@@ -373,7 +374,7 @@ namespace Lab3.Bai04
             {
                 try
                 {
-                    byte[] data = Encoding.ASCII.GetBytes("quit\n");
+                    byte[] data = Encoding.UTF8.GetBytes("quit\n");
                     ns.Write(data, 0, data.Length);
                     ns.Close();
                     tcpClient.Close();
