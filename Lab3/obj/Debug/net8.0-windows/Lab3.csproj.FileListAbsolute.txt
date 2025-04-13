@@ -24,3 +24,4 @@ D:\Microsoft Visual Studio\LTM\Lab3\Lab3\obj\Debug\net8.0-windows\Lab3.sourcelin
 D:\Microsoft Visual Studio\LTM\Lab3\Lab3\obj\Debug\net8.0-windows\Lab3.Bai04.ChatClient.resources
 D:\Microsoft Visual Studio\LTM\Lab3\Lab3\obj\Debug\net8.0-windows\Lab3.Bai04.ChatServer.resources
 D:\Microsoft Visual Studio\LTM\Lab3\Lab3\obj\Debug\net8.0-windows\Lab3.Bai04.ChatRoom.resources
+D:\Microsoft Visual Studio\LTM\Lab3\Lab3\obj\Debug\net8.0-windows\Lab3.Bai03.Server.resources

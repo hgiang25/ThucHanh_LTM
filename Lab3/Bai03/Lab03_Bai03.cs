@@ -20,8 +20,8 @@ namespace Lab3.Bai03
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TCPServer form = new TCPServer();
-            form.Show();
+            Server server = new Server();
+            server.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

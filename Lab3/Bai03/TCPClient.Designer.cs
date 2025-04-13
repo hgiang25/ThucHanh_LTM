@@ -75,6 +75,7 @@
             Controls.Add(btnSend);
             Name = "TCPClient";
             Text = "TCPClientForm";
+            FormClosing += TCPClient_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }

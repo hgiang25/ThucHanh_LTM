@@ -90,7 +90,7 @@
             Controls.Add(txtPort);
             Name = "UDPServer";
             Text = "UDPServer";
-            //FormClosing += UDPServer_FormClosing;
+            FormClosing += UDPServer_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }

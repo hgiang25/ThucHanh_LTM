@@ -172,7 +172,7 @@ namespace Lab3.Bai04
             lvMessages.UseCompatibleStateImageBehavior = false;
             lvMessages.View = View.List;
             // 
-            // TCPClient
+            // ChatClient
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -184,8 +184,9 @@ namespace Lab3.Bai04
             Controls.Add(btnClose);
             Controls.Add(btnConnect);
             Controls.Add(btnSend);
-            Name = "TCPClient";
+            Name = "ChatClient";
             Text = "TCPClientForm";
+            FormClosing += ChatClient_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }

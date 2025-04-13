@@ -193,13 +193,23 @@ namespace Lab3.Bai04
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            StopServer();
+            MessageBox.Show("Server stopped");
+        }
+
+        private void ChatServer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StopServer();
+        }
+
+        private void StopServer()
+        {
             isServerRunning = false;
 
-            // Gửi tin nhắn đóng kết nối đến tất cả client trước khi đóng
             string shutdownMessage = "SERVER_CLOSING\n";
             byte[] shutdownBytes = Encoding.UTF8.GetBytes(shutdownMessage);
 
-            foreach (var client in clientList)
+            foreach (var client in clientList.ToList())
             {
                 if (client.Connected)
                 {
@@ -211,13 +221,13 @@ namespace Lab3.Bai04
                     catch { }
                 }
 
-                client.Close();
+                try { client.Close(); } catch { }
             }
 
             clientList.Clear();
-            tcpListener?.Stop();
+            clientUsernames.Clear();
 
-            MessageBox.Show("Server stopped");
+            try { tcpListener?.Stop(); } catch { }
         }
 
     }

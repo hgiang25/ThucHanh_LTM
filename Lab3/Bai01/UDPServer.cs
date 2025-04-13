@@ -20,10 +20,11 @@ namespace Lab3.Bai01
         delegate void InfoMessageDel(String info);
         private Thread serverThread;
         private UdpClient udpClient;
+        private bool isRunning = false;
 
         public UDPServer()
         {
-        InitializeComponent();
+            InitializeComponent();
         }
 
         private bool IsPortInUse(int port)
@@ -42,28 +43,43 @@ namespace Lab3.Bai01
             else
             {
                 rtbMess.AppendText(message + Environment.NewLine);
-            }           
+            }
         }
         public void ServerThread()
         {
             try
             {
-                udpClient = new UdpClient(Convert.ToInt32(txtPort.Text));                
-                while (true)
+                udpClient = new UdpClient(Convert.ToInt32(txtPort.Text));
+                isRunning = true;
+
+                IPEndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 0);
+                //InfoMessage($"Server đang lắng nghe tại cổng {((IPEndPoint)udpClient.Client.LocalEndPoint).Port}");
+
+                while (isRunning)
                 {
-                    IPEndPoint RemoteIPEndPoint = new IPEndPoint(IPAddress.Any, 0);
-                    Byte[] receivedBytes = udpClient.Receive(ref RemoteIPEndPoint);
-                    string returnData = Encoding.UTF8.GetString(receivedBytes);
-                    string mess = RemoteIPEndPoint.Address.ToString() + ":" +
-                        returnData.ToString();
-                    InfoMessage(mess);
+                    if (udpClient.Available > 0) // Kiểm tra có dữ liệu trước khi nhận
+                    {
+                        byte[] receivedBytes = udpClient.Receive(ref remoteEndPoint);
+                        string returnData = Encoding.UTF8.GetString(receivedBytes);
+                        string mess = $"{remoteEndPoint.Address}:{returnData}";
+                        InfoMessage(mess);
+                    }
+                    else
+                    {
+                        Thread.Sleep(100); // Tránh vòng lặp chạy liên tục gây tốn CPU
+                    }
                 }
             }
-            catch(Exception ex) 
+            catch (SocketException se)
             {
-                MessageBox.Show("Lỗi:" + ex.Message);
-            }                       
+                InfoMessage($"Socket đã đóng: {se.Message}");
+            }
+            catch (Exception ex)
+            {
+                InfoMessage($"Lỗi: {ex.Message}");
+            }
         }
+
 
         private void btnListen_Click(object sender, EventArgs e)
         {
@@ -74,45 +90,48 @@ namespace Lab3.Bai01
                 return;
             }
 
-            // Kiểm tra nếu cổng đã được dùng
             if (IsPortInUse(port))
             {
-                MessageBox.Show($"Cổng {port} đang được sử dụng bởi một ứng dụng khác. Vui lòng chọn cổng khác.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Cổng {port} đang được sử dụng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Kiểm tra nếu server đã chạy
             if (serverThread != null && serverThread.IsAlive)
             {
-                MessageBox.Show("Server đang hoạt động!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Server đang lắng nghe!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             serverThread = new Thread(new ThreadStart(ServerThread));
             serverThread.IsBackground = true;
             serverThread.Start();
+
             MessageBox.Show($"Server đang lắng nghe trên cổng {port}...", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        //private void UDPServer_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    try
-        //    {
-        //        if (serverThread != null && serverThread.IsAlive)
-        //        {
-        //            serverThread.Abort(); // Hoặc dùng cancellation token nếu muốn an toàn hơn
-        //        }
 
-        //        if (udpClient != null)
-        //        {
-        //            udpClient.Close();
-        //            udpClient = null;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Lỗi khi đóng server: " + ex.Message);
-        //    }
-        //}
+
+        private void UDPServer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                isRunning = false;
+
+                if (udpClient != null)
+                {
+                    udpClient.Close(); // Giải phóng socket để break khỏi Receive()
+                    udpClient = null;
+                }
+
+                if (serverThread != null && serverThread.IsAlive)
+                {
+                    serverThread.Join(500); // Chờ thread dừng trong tối đa 0.5s
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi đóng server: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
     }
 }

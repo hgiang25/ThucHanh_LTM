@@ -21,7 +21,7 @@ namespace Lab3.Bai03
 
         private TcpClient tcpClient = null;
         private NetworkStream ns;
-        
+
 
         private void btnSend_Click(object sender, EventArgs e)
         {
@@ -31,7 +31,7 @@ namespace Lab3.Bai03
                 {
                     string message = "Hello server\n";
                     byte[] data = Encoding.ASCII.GetBytes(message);
-                    ns.Write(data, 0, data.Length);                    
+                    ns.Write(data, 0, data.Length);
                 }
                 catch (Exception ex)
                 {
@@ -108,12 +108,7 @@ namespace Lab3.Bai03
             {
                 try
                 {
-                    byte[] data = Encoding.ASCII.GetBytes("quit\n");
-                    ns.Write(data, 0, data.Length);
-                    ns.Close();
-                    tcpClient.Close();
-                    tcpClient = null;
-                    ns = null;                    
+                    StopClient();
                 }
                 catch (Exception ex)
                 {
@@ -125,5 +120,46 @@ namespace Lab3.Bai03
                 MessageBox.Show("Chưa có kết nối nào để đóng!");
             }
         }
+
+        private void TCPClient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Gọi StopClient trước khi đóng form
+            StopClient();
+        }
+
+        private void StopClient()
+        {
+            // Kiểm tra kết nối có tồn tại trước khi cố gắng gửi yêu cầu đóng kết nối
+            if (tcpClient != null && tcpClient.Connected)
+            {
+                try
+                {
+                    byte[] data = Encoding.ASCII.GetBytes("quit\n");
+                    ns.Write(data, 0, data.Length);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi gửi yêu cầu ngừng kết nối: " + ex.Message);
+                }
+            }
+
+            // Đảm bảo đóng luồng và kết nối an toàn
+            try
+            {
+                ns?.Close();
+                tcpClient?.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi đóng kết nối: " + ex.Message);
+            }
+            finally
+            {
+                // Đặt lại tcpClient và ns về null sau khi đã đóng kết nối
+                tcpClient = null;
+                ns = null;
+            }
+        }
+
     }
 }

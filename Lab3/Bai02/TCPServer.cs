@@ -297,17 +297,17 @@ namespace Lab3.Bai02
                     }
 
                     // Gửi phản hồi "OK"
-                    try
-                    {
-                        byte[] welcomeMsg = Encoding.UTF8.GetBytes("OK\n");
-                        currentClient.Send(welcomeMsg);
-                    }
-                    catch
-                    {
-                        currentClient.Close();
-                        currentClient = null;
-                        continue;
-                    }
+                    //try
+                    //{
+                    //    byte[] welcomeMsg = Encoding.UTF8.GetBytes("OK\n");
+                    //    currentClient.Send(welcomeMsg);
+                    //}
+                    //catch
+                    //{
+                    //    currentClient.Close();
+                    //    currentClient = null;
+                    //    continue;
+                    //}
 
                     lvMessage.Invoke(new Action(() =>
                     {
@@ -329,41 +329,47 @@ namespace Lab3.Bai02
         {
             byte[] recv = new byte[1024];
             int bytesReceived = 0;
+            StringBuilder buffer = new StringBuilder();
 
             try
             {
                 while (isServerRunning)
                 {
-                    string text = "";
-
-                    do
+                    try
                     {
-                        try
-                        {
-                            bytesReceived = clientSocket.Receive(recv);
-                        }
-                        catch (SocketException se)
-                        {
-                            if (se.SocketErrorCode == SocketError.TimedOut)
-                                continue;
-                            else throw;
-                        }
-
+                        bytesReceived = clientSocket.Receive(recv);
                         if (bytesReceived == 0)
-                            break;
+                            break; // client đóng kết nối
 
-                        text += Encoding.UTF8.GetString(recv, 0, bytesReceived);
+                        buffer.Append(Encoding.UTF8.GetString(recv, 0, bytesReceived));
+
+                        string data = buffer.ToString();
+                        int newlineIndex;
+                        while ((newlineIndex = data.IndexOf('\n')) >= 0)
+                        {
+                            string line = data.Substring(0, newlineIndex).Trim('\r');
+                            buffer.Remove(0, newlineIndex + 1); // bỏ phần đã xử lý
+
+                            if (line.ToLower() == "quit")
+                                return;
+
+                            if (line.ToUpper() == "HELLO")
+                                continue;
+
+                            lvMessage.Invoke(new Action(() =>
+                            {
+                                lvMessage.Items.Add(new ListViewItem(line));
+                            }));
+
+                            data = buffer.ToString();
+                        }
                     }
-                    while (!text.EndsWith("\n"));
-
-                    if (text.Trim().ToLower() == "quit")
-                        break;
-                    if (text.Trim().ToUpper() == "HELLO")
-                        continue;
-                    lvMessage.Invoke(new Action(() =>
+                    catch (SocketException se)
                     {
-                        lvMessage.Items.Add(new ListViewItem(text.Trim()));
-                    }));
+                        if (se.SocketErrorCode == SocketError.TimedOut)
+                            continue;
+                        else throw;
+                    }
                 }
             }
             catch (Exception ex)
@@ -387,6 +393,8 @@ namespace Lab3.Bai02
                 }));
             }
         }
+
+
 
 
 

@@ -164,7 +164,7 @@ namespace Lab3.Bai04
             Controls.Add(btnListen);
             Name = "TCPServer";
             Text = "TCPServer";
-            //FormClosing += ChatServer_FormClosing;
+            FormClosing += ChatServer_FormClosing;
             ResumeLayout(false);
         }
 

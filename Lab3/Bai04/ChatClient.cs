@@ -222,5 +222,37 @@ namespace Lab3.Bai04
             //btnSend.Enabled = false;
             //txtMessage.Enabled = false;
         }
+
+        private void ChatClient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                isReceiving = false;
+
+                if (tcpClient != null && tcpClient.Connected)
+                {
+                    byte[] data = Encoding.UTF8.GetBytes("quit\n");
+                    ns.Write(data, 0, data.Length);
+                    ns.Flush();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi gửi yêu cầu ngắt kết nối: " + ex.Message);
+            }
+            finally
+            {
+                try
+                {
+                    ns?.Close();
+                    tcpClient?.Close();
+                }
+                catch { }
+
+                ns = null;
+                tcpClient = null;
+            }
+        }
+
     }
 }

@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai04\\chatserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,20 +15,64 @@
       "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|D:\\Microsoft Visual Studio\\LTM\\Lab3\\lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai04\\chatclient.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatclient.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai03\\tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai03\\tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai02\\tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai02\\tcpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai03\\tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai03\\tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai03\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai03\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai03\\server.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai03\\server.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai03\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai03\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|D:\\Microsoft Visual Studio\\LTM\\Lab3\\lab3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai04\\chatroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai03\\lab03_bai03.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai03\\lab03_bai03.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai04\\chatclient.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatclient.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai01\\udpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai01\\udpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai01\\udpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai01\\udpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai01\\udpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai01\\udpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\bai04\\chatroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|D:\\Microsoft Visual Studio\\LTM\\Lab3\\lab3\\bai04\\chatroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -44,10 +84,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|d:\\microsoft visual studio\\ltm\\lab3\\lab3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|D:\\Microsoft Visual Studio\\LTM\\Lab3\\lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEB4380F-5E24-404D-8747-C16314914AA1}|Lab3\\Lab3.csproj|solutionrelative:lab3\\bai04\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,8 +93,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 19,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TCPClient.cs [Design]",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\TCPClient.cs",
+              "RelativeDocumentMoniker": "Lab3\\Bai03\\TCPClient.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\TCPClient.cs [Design]",
+              "RelativeToolTip": "Lab3\\Bai03\\TCPClient.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:30:03.457Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Lab03_Bai03.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\Lab03_Bai03.cs",
+              "RelativeDocumentMoniker": "Lab3\\Bai03\\Lab03_Bai03.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\Lab03_Bai03.cs",
+              "RelativeToolTip": "Lab3\\Bai03\\Lab03_Bai03.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:12:40.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Server.Designer.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\Server.Designer.cs",
+              "RelativeDocumentMoniker": "Lab3\\Bai03\\Server.Designer.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\Server.Designer.cs",
+              "RelativeToolTip": "Lab3\\Bai03\\Server.Designer.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAYwGoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:11:31.109Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -72,25 +146,97 @@
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Server.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\Server.cs",
+              "RelativeDocumentMoniker": "Lab3\\Bai03\\Server.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\Server.cs",
+              "RelativeToolTip": "Lab3\\Bai03\\Server.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAwwKwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:11:06.848Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
+              "Title": "Server.cs [Design]",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\Server.cs",
+              "RelativeDocumentMoniker": "Lab3\\Bai03\\Server.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\Server.cs [Design]",
+              "RelativeToolTip": "Lab3\\Bai03\\Server.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T14:10:55.469Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TCPClient.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\TCPClient.cs",
+              "RelativeDocumentMoniker": "Lab3\\Bai03\\TCPClient.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai03\\TCPClient.cs",
+              "RelativeToolTip": "Lab3\\Bai03\\TCPClient.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAowG0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T13:58:15.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UDPServer.cs [Design]",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai01\\UDPServer.cs",
+              "RelativeDocumentMoniker": "Lab3\\Bai01\\UDPServer.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai01\\UDPServer.cs [Design]",
+              "RelativeToolTip": "Lab3\\Bai01\\UDPServer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T13:46:00.55Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UDPServer.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai01\\UDPServer.cs",
+              "RelativeDocumentMoniker": "Lab3\\Bai01\\UDPServer.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai01\\UDPServer.cs",
+              "RelativeToolTip": "Lab3\\Bai01\\UDPServer.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAwwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T13:37:19.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UDPClient.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai01\\UDPClient.cs",
+              "RelativeDocumentMoniker": "Lab3\\Bai01\\UDPClient.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai01\\UDPClient.cs",
+              "RelativeToolTip": "Lab3\\Bai01\\UDPClient.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAADwv0MAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T13:33:07.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "TCPServer.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai02\\TCPServer.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai02\\TCPServer.cs",
               "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai02\\TCPServer.cs",
               "RelativeToolTip": "Lab3\\Bai02\\TCPServer.cs",
-              "ViewState": "AgIAAEUBAAAAAAAAAAAgwNgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAJkBAAAAAAAAAAAUwC8BAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-11T12:24:49.059Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Ch\u01B0\u01A1ng3\\Chuong3-Bosung\\Chuong3Bai9\\SendBroadcst\\Program.cs",
               "RelativeDocumentMoniker": "..\\Ch\u01B0\u01A1ng3\\Chuong3-Bosung\\Chuong3Bai9\\SendBroadcst\\Program.cs",
@@ -102,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "ChatRoom.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatRoom.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatRoom.cs",
@@ -115,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "ChatRoom.cs [Design]",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatRoom.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatRoom.cs",
@@ -126,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "ChatClient.Designer.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.Designer.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatClient.Designer.cs",
@@ -134,61 +280,63 @@
               "RelativeToolTip": "Lab3\\Bai04\\ChatClient.Designer.cs",
               "ViewState": "AgIAAGcAAAAAAAAAAAAQwFsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T14:40:09.667Z"
+              "WhenOpened": "2025-04-03T14:40:09.667Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ChatClient.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatClient.cs",
-              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.cs*",
-              "RelativeToolTip": "Lab3\\Bai04\\ChatClient.cs*",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAkwLgAAAAtAAAAAAAAAA==",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.cs",
+              "RelativeToolTip": "Lab3\\Bai04\\ChatClient.cs",
+              "ViewState": "AgIAANsAAAAAAAAAAAAswPgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T14:38:22.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ChatServer.Designer.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.Designer.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatServer.Designer.cs",
-              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.Designer.cs",
-              "RelativeToolTip": "Lab3\\Bai04\\ChatServer.Designer.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAADwv1UAAAABAAAAAAAAAA==",
+              "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.Designer.cs*",
+              "RelativeToolTip": "Lab3\\Bai04\\ChatServer.Designer.cs*",
+              "ViewState": "AgIAAJUAAAAAAAAAAADwv6MAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T14:35:02.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ChatServer.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatServer.cs",
               "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.cs*",
               "RelativeToolTip": "Lab3\\Bai04\\ChatServer.cs*",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAowMwAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAUwOEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T14:34:55.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "ChatClient.cs [Design]",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatClient.cs",
               "ToolTip": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatClient.cs [Design]",
               "RelativeToolTip": "Lab3\\Bai04\\ChatClient.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T14:34:47.107Z"
+              "WhenOpened": "2025-04-03T14:34:47.107Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ChatServer.cs [Design]",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\Bai04\\ChatServer.cs",
               "RelativeDocumentMoniker": "Lab3\\Bai04\\ChatServer.cs",
@@ -200,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "MainForm.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\MainForm.cs",
               "RelativeDocumentMoniker": "Lab3\\MainForm.cs",
@@ -213,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "D:\\Microsoft Visual Studio\\LTM\\Lab3\\Lab3\\MainForm.cs",
               "RelativeDocumentMoniker": "Lab3\\MainForm.cs",
