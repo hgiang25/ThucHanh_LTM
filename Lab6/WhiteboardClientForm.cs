@@ -158,20 +158,13 @@ namespace Lab6
                         byte[] imgBytes = Convert.FromBase64String(base64);
                         Invoke(new Action(() =>
                         {
-                            actions.Clear();
                             using (MemoryStream ms = new MemoryStream(imgBytes))
                             {
                                 Image img = Image.FromStream(ms);
-                                var action = new DrawAction
-                                {
-                                    Type = ActionType.Image,
-                                    ImageRect = new Rectangle(0, 0, canvas.Width, canvas.Height),
-                                    Image = (Image)img.Clone()
-                                };
-                                actions.Add(action);
+                                g.Clear(Color.White); // Xóa canvas hiện tại
+                                g.DrawImage(img, 0, 0, canvas.Width, canvas.Height); // Vẽ hình ảnh từ server lên canvas
                             }
-                            RedrawAll();
-                            pictureBox1.Invalidate(); // Ensure canvas is refreshed
+                            pictureBox1.Invalidate(); // Cập nhật giao diện
                             pictureBox1.Refresh();
                         }));
                     }

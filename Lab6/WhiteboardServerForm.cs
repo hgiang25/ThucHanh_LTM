@@ -327,24 +327,64 @@ namespace Lab6
 
         private void SendCurrentWhiteboardToClient(TcpClient client)
         {
-            byte[] imgBytes;
-            lock (bitmapLock)
-            {
-                using (var ms = new MemoryStream())
-                {
-                    whiteboardBitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    imgBytes = ms.ToArray();
-                }
-            }
-            string base64 = Convert.ToBase64String(imgBytes);
-            var message = JsonSerializer.Serialize(new { type = "whiteboard_image", imageBase64 = base64 });
-
             try
             {
                 NetworkStream stream = client.GetStream();
-                byte[] data = Encoding.UTF8.GetBytes(message);
-                stream.Write(data, 0, data.Length);
+
+                // Gửi ảnh bảng vẽ hiện tại
+                byte[] imgBytes;
+                lock (bitmapLock)
+                {
+                    using (var ms = new MemoryStream())
+                    {
+                        whiteboardBitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                        imgBytes = ms.ToArray();
+                    }
+                }
+                string base64 = Convert.ToBase64String(imgBytes);
+                var whiteboardMessage = JsonSerializer.Serialize(new { type = "whiteboard_image", imageBase64 = base64 });
+                byte[] whiteboardData = Encoding.UTF8.GetBytes(whiteboardMessage);
+                stream.Write(whiteboardData, 0, whiteboardData.Length);
                 stream.Flush();
+                Console.WriteLine("Sent whiteboard image to new client");
+
+                // Gửi danh sách các hành động (actions)
+                lock (bitmapLock)
+                {
+                    foreach (var action in actions)
+                    {
+                        if (action.Type == ActionType.Line)
+                        {
+                            var message = JsonSerializer.Serialize(new
+                            {
+                                type = "draw",
+                                x1 = action.StartPoint.X,
+                                y1 = action.StartPoint.Y,
+                                x2 = action.EndPoint.X,
+                                y2 = action.EndPoint.Y,
+                                color = ColorTranslator.ToHtml(action.PenColor),
+                                thickness = (int)action.PenWidth
+                            });
+                            byte[] data = Encoding.UTF8.GetBytes(message);
+                            stream.Write(data, 0, data.Length);
+                            stream.Flush();
+                        }
+                        else if (action.Type == ActionType.Image)
+                        {
+                            var message = JsonSerializer.Serialize(new
+                            {
+                                type = "image",
+                                url = action.ImageUrl,
+                                width = action.ImageRect!.Value.Width,
+                                height = action.ImageRect!.Value.Height
+                            });
+                            byte[] data = Encoding.UTF8.GetBytes(message);
+                            stream.Write(data, 0, data.Length);
+                            stream.Flush();
+                        }
+                    }
+                }
+                Console.WriteLine($"Sent {actions.Count} actions to new client");
             }
             catch (Exception ex)
             {
